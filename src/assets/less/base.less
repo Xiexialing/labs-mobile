@@ -1,0 +1,76 @@
+/**
+ *  定义css经常使用的变量
+ */
+@charset "utf-8";
+@color-f6: #F6F6F6;
+@color-white: #fff;
+@color-4895FD: #4895FD;
+@color-3D465B: #3D465B;
+@color-000: #000;
+@color-A4ABB1: #A4ABB1;
+@color-7A869D:#7A869D;
+@color-transition: color 0.5s;
+@transition-duration: transform 0.5s;
+@scale: scale(1.2);
+@margin: 10px;
+@padding: 10px;
+@right: 10px;
+@left: 10px;
+@top: 10px;
+@bottom: 10px;
+@height: 10px;
+@width: 10px;
+@font-size12: 12px;
+@font-size14: 14px;
+@font-size16: 16px;
+@font-size18: 18px;
+@font-size20: 20px;
+@font-size24: 24px;
+@font-size30: 30px;
+@text-indent: 10px;
+@border-radius4: 4px;
+@border-radius6: 6px;
+@border-radius8: 8px;
+@border-radius16: 16px;
+@border: 1px solid #E8EBEF;
+@border-blue: 1px solid #0085ff;
+@border-dash: 1px dashed rgb(211, 211, 211);
+@box-shadow: 0 2px 2px 0 rgba(211, 211, 211, 0.25);
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.border-1px( @color ) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid @color;
+    width: 100%;
+    content: '';
+  }
+}
+
+.border-none () {
+  &:after {
+    display: none
+  }
+}
+
+.bg-image( @url ) {
+  background-image: url("@{url}/@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio) {
+    background-image: url("@{url}/@3x.png");
+  }
+}
+
+

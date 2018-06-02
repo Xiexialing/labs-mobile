@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="baidu-site-verification" content="PbI5OnCEMR" />
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <title>移动Labs</title>
+  <link rel="Shortcut icon" type="image/x-icon" href="./mobileStatic/favicon.ico">
+  <!--<script type="text/javascript">-->
+    <!--(function () {-->
+      <!--if (/s=noRedirect/i.test(location.search)) return-->
+      <!--if (!(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent)))) {-->
+        <!--try {-->
+          <!--if (!(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) {-->
+            <!--window.location.href = 'http://' + window.location.host-->
+          <!--}-->
+        <!--} catch (e) {-->
+        <!--}-->
+      <!--}-->
+    <!--})()-->
+  <!--</script>-->
+  <script>
+    // 判断手机横竖屏状态：
+    window.addEventListener('orientationchange', function (ev) {
+      if (isWeiXin()) {
+        window.location.reload()
+      }
+    }, false)
+    function isWeiXin () {
+      var ua = window.navigator.userAgent.toLowerCase()
+      if (ua.match(/MicroMessenger/i) === 'micromessenger') {
+        return true
+      } else {
+        return false
+      }
+    }
+  </script>
+  <script>
+    window.onload = function () {
+      (function () {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?201eae5839f7d41b12f75192d2338c31'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
+    }
+  </script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>
